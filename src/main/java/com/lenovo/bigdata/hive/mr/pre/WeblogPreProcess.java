@@ -78,10 +78,10 @@ public class WeblogPreProcess {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(NullWritable.class);
 
-//		 FileInputFormat.setInputPaths(job, new Path(args[0]));
-//		 FileOutputFormat.setOutputPath(job, new Path(args[1]));
-		FileInputFormat.setInputPaths(job, new Path("/weblog/input"));
-		FileOutputFormat.setOutputPath(job, new Path("/weblog/output"));
+		 FileInputFormat.setInputPaths(job, new Path(args[0]));
+		 FileOutputFormat.setOutputPath(job, new Path(args[1]));
+//		FileInputFormat.setInputPaths(job, new Path("/weblog/input"));
+//		FileOutputFormat.setOutputPath(job, new Path("/weblog/output"));
 
 		job.setNumReduceTasks(0);
 		

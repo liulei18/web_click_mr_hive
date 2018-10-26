@@ -201,11 +201,11 @@ public class ClickStreamThree {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);
 
-//		 FileInputFormat.setInputPaths(job, new Path(args[0]));
-//		 FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		 FileInputFormat.setInputPaths(job, new Path(args[0]));
+		 FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-		FileInputFormat.setInputPaths(job, new Path("/weblog/output"));
-		FileOutputFormat.setOutputPath(job, new Path("/weblog/pageviews"));
+//		FileInputFormat.setInputPaths(job, new Path("/weblog/output"));
+//		FileOutputFormat.setOutputPath(job, new Path("/weblog/pageviews"));
 
 		job.waitForCompletion(true);
 
