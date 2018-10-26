@@ -91,7 +91,7 @@ public class UserStayTime {
 		}
 
 		private Date toDate(String timeStr) throws ParseException {
-			SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy:HH:mm:ss", Locale.US);
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
 			return df.parse(timeStr);
 		}
 
@@ -165,12 +165,12 @@ public class UserStayTime {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);
 
-		/*FileInputFormat.setInputPaths(job, new Path(args[0]));
-		FileOutputFormat.setOutputPath(job, new Path(args[1]));*/
+		FileInputFormat.setInputPaths(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 		
-		 FileInputFormat.setInputPaths(job, new Path("c:/weblog/input"));
-		 FileOutputFormat.setOutputPath(job, new Path("c:/weblog/output"));
+//		 FileInputFormat.setInputPaths(job, new Path("c:/weblog/input"));
+//		 FileOutputFormat.setOutputPath(job, new Path("c:/weblog/output"));
 		 
 
 		job.waitForCompletion(true);
