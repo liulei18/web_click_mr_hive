@@ -25,6 +25,9 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import com.lenovo.bigdata.hive.mrbean.WebLogBean;
 import com.lenovo.bigdata.hive.mrbean.WebLogParser;
 
+/**
+ * hadoop jar weblog.jar com.lenovo.bigdata.hive.mr.UserStayTime /weblog/input /weblog/stayout0
+ */
 public class UserStayTime {
 
 	static class UserStayTimeMapper extends Mapper<LongWritable, Text, Text, Text> {
